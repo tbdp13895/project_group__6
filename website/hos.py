@@ -1,9 +1,12 @@
 from flask import Flask, render_template
 import pathlib
 import sqlite3
+import os
+
 
 base_path = pathlib.Path(r'D:\DATA ANALYTICS FOR BUSINESS\1st TERM\DAB 111 - 001 - Intro to Python Programming\GROUP PROJECT\project_group__6\database')
 db_name = "Hospital.db"
+my_path = os.path.join(os.path.dirname(__file__), db_name)
 db_path = base_path / db_name
 print(db_path)
 
@@ -19,7 +22,7 @@ def about():
 
 @hos.route("/data")
 def data():
-    con = sqlite3.connect(db_path)
+    con = sqlite3.connect(my_path)
     cursor = con.cursor()
     lst = cursor.execute('SELECT * FROM hospital Limit 5').fetchall()
     con.close()
