@@ -8,7 +8,7 @@ Our Python web application is designed to analyze hospital data stored in an SQL
 ## Project Structure:
 
 PROJECT_GROUP__6/
-`
+```
 ├── data collection/
 │   └── collect.ipynb
 |
@@ -29,8 +29,8 @@ PROJECT_GROUP__6/
 |
 ├── .gitinore
 ├── README.md
-└── requirements.txt`
-
+└── requirements.txt
+```
 - database/: Directory containing the SQLite database file hospital.db, which stores the hospital data.
 - templates/: Directory containing HTML templates for the web pages.
 - about.html: Template for the About page.
